@@ -15,62 +15,59 @@
         android:scaleType="centerCrop"
         android:contentDescription="@string/banner_desc" />
 
-    <GridLayout
+    <!-- 移除内层权重，改用水平分布+固定宽高 -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:columnCount="2"
-        android:rowCount="2"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
         android:padding="16dp"
-        android:spacing="16dp">
+        android:spacing="16dp"
+        android:layout_weight="2">
 
         <ImageButton
             android:id="@+id/btn_facilities"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@drawable/img_btn_facilities"
             android:scaleType="centerInside"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="@string/facilities_btn_desc"
-            app:tint="@drawable/button_selector" />
+            app:tint="@drawable/button_selector"
+            android:layout_margin="8dp" />
 
         <ImageButton
             android:id="@+id/btn_events"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@drawable/img_btn_events"
             android:scaleType="centerInside"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="@string/events_btn_desc"
-            app:tint="@drawable/button_selector" />
+            app:tint="@drawable/button_selector"
+            android:layout_margin="8dp" />
 
         <ImageButton
             android:id="@+id/btn_clubs"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@drawable/img_btn_clubs"
             android:scaleType="centerInside"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="@string/clubs_btn_desc"
-            app:tint="@drawable/button_selector" />
+            app:tint="@drawable/button_selector"
+            android:layout_margin="8dp" />
 
         <ImageButton
             android:id="@+id/btn_support"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@drawable/img_btn_support"
             android:scaleType="centerInside"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="@string/support_btn_desc"
-            app:tint="@drawable/button_selector" />
-    </GridLayout>
+            app:tint="@drawable/button_selector"
+            android:layout_margin="8dp" />
+    </LinearLayout>
 
 </LinearLayout>

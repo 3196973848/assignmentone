@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 按压时颜色：浅绿 -->
+    <item android:color="@color/light_green" android:state_pressed="true"/>
+    <!-- 未按压时颜色：深绿 -->
+    <item android:color="@color/green"/>
+</selector>
