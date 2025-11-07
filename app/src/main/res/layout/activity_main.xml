@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 顶部Banner -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/img_main_banner"
+        android:scaleType="centerCrop" />
+
+    <!-- 四个功能按钮（2x2网格） -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:padding="16dp"
+        android:spacing="16dp">
+
+        <!-- Facilities按钮 -->
+        <ImageButton
+            android:id="@+id/btn_facilities"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_btn_facilities"
+            android:scaleType="centerInside"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+        <!-- Events按钮 -->
+        <ImageButton
+            android:id="@+id/btn_events"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_btn_events"
+            android:scaleType="centerInside"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+        <!-- Clubs按钮 -->
+        <ImageButton
+            android:id="@+id/btn_clubs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_btn_clubs"
+            android:scaleType="centerInside"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+        <!-- Support按钮 -->
+        <ImageButton
+            android:id="@+id/btn_support"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_btn_support"
+            android:scaleType="centerInside"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+    </GridLayout>
+
+</LinearLayout>
