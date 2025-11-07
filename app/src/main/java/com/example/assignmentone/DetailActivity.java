@@ -10,7 +10,29 @@ public class DetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail); // 需创建对应的布局文件
+        setContentView(R.layout.activity_detail)
+        // 1. 获取从MainActivity传递过来的标识
+        int itemId = getIntent().getIntExtra("ITEM_ID", 0);
+
+// 2. 从arrays.xml中获取数据
+        String[] titles = getResources().getStringArray(R.array.titles);
+        String[] contents = getResources().getStringArray(R.array.contents);
+        String[] imageNames = getResources().getStringArray(R.array.image_names);
+
+// 3. 找到DetailActivity的控件
+        TextView tvTitle = findViewById(R.id.tv_title);
+        TextView tvContent = findViewById(R.id.tv_content);
+        ImageView ivDetail = findViewById(R.id.iv_detail);
+
+// 4. 给控件设置数据（不用if/switch，直接用itemId索引）
+        tvTitle.setText(titles[itemId]);
+        tvContent.setText(contents[itemId]);
+
+// 根据图片名获取drawable资源ID
+        int imageResId = getResources().getIdentifier(
+                imageNames[itemId], "drawable", getPackageName()
+        );
+        ivDetail.setImageResource(imageResId);; // 需创建对应的布局文件
 
         // 获取传递的标识
         Intent intent = getIntent();
