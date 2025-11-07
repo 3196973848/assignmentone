@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AssignmentOne</string>
+<string name="banner_desc">主页面顶部Banner图</string>
+<string name="facilities_btn_desc">设施功能按钮</string>
+<string name="events_btn_desc">活动功能按钮</string>
+<string name="clubs_btn_desc">社团功能按钮</string>
+<string name="support_btn_desc">支持功能按钮</string>
 </resources>
